@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import BookNow from './pages/Book'
+import Book from './pages/Book'
 import MyBookings from './pages/MyBookings'
 import About from './pages/About'
 
