@@ -1,0 +1,22 @@
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import BookNow from './pages/Book'
+import MyBookings from './pages/MyBookings'
+import About from './pages/About'
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/book" element={<Book />} />
+        <Route path="/bookings" element={<MyBookings />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </>
+  )
+}
+
+export default App
