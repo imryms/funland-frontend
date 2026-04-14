@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const Book = ({ bookings, setBookings }) => {
+  const navigate = useNavigate()
+
   const initialState = {
     customerName: "",
     customerEmail: "",
@@ -29,60 +32,63 @@ const Book = ({ bookings, setBookings }) => {
     setBookings(bookingList)
 
     setFormState(initialState)
+    navigate("/bookings")
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Name:</label>
-      <input
-        type="text"
-        name="customerName"
-        onChange={handleChange}
-        value={formState.customerName}
-        autoComplete="off"
-      />
+    <div className="booking">
+      <form className="bookingForm" onSubmit={handleSubmit}>
+        <label>Name:</label>
+        <input
+          type="text"
+          name="customerName"
+          onChange={handleChange}
+          value={formState.customerName}
+          autoComplete="off"
+        />
 
-      <label>Email:</label>
-      <input
-        type="email"
-        name="customerEmail"
-        onChange={handleChange}
-        value={formState.customerEmail}
-        autoComplete="off"
-      />
+        <label>Email:</label>
+        <input
+          type="email"
+          name="customerEmail"
+          onChange={handleChange}
+          value={formState.customerEmail}
+          autoComplete="off"
+        />
 
-      <label>Ticket Type:</label>
-      <select
-        name="ticketType"
-        onChange={handleChange}
-        value={formState.ticketType}
-      >
-        <option value="" disabled>
-          Select Ticket Type
-        </option>
-        <option value="Adults">Adults</option>
-        <option value="Kids">Kids</option>
-      </select>
+        <label>Ticket Type:</label>
+        <select
+          name="ticketType"
+          onChange={handleChange}
+          value={formState.ticketType}
+        >
+          <option value="" disabled>
+            Select Ticket Type
+          </option>
+          <option value="Adults">Adults</option>
+          <option value="Kids">Kids</option>
+        </select>
 
-      <label>Quantity:</label>
-      <input
-        type="number"
-        name="quantity"
-        min="1"
-        onChange={handleChange}
-        value={formState.quantity}
-      />
+        <label>Quantity:</label>
+        <input
+          type="number"
+          name="quantity"
+          min="1"
+          onChange={handleChange}
+          value={formState.quantity}
+        />
 
-      <label>Booking Date:</label>
-      <input
-        type="date"
-        name="bookingDate"
-        onChange={handleChange}
-        value={formState.bookingDate}
-      />
+        <label>Booking Date:</label>
+        <input
+          type="date"
+          name="bookingDate"
+          onChange={handleChange}
+          value={formState.bookingDate}
+        />
 
-      <button type="submit">Book</button>
-    </form>
+        <button type="submit">Book</button>
+      </form>
+    </div>
   )
 }
 
