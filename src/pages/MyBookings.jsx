@@ -63,7 +63,7 @@ const MyBookings = () => {
 
             <button onClick={deleteOnClick}>Delete</button>
           </div>
-        ))): (<p>No booking found</p>)}
+        ))) : (<p>No booking found</p>)}
       </div>
     </div>
 
