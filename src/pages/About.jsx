@@ -9,11 +9,13 @@ const About = () => {
 
         <p className="aboutText">
           FunLand is your perfect destination for fun, adventure, and unforgettable memories.
+        </p>
+        <p className="aboutText">
           We offer exciting rides, family-friendly attractions, and a simple booking experience.
         </p>
 
         <p className="aboutText">
-          Whether you're visiting with friends or family, FunLand guarantees a day full of joy and excitement.
+          Whether you're visiting with friends or family, FunLand guarantees a day full of excitement.
         </p>
       </section>
 

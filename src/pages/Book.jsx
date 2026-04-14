@@ -32,12 +32,14 @@ const Book = ({ bookings, setBookings }) => {
     setBookings(bookingList)
 
     setFormState(initialState)
-    navigate("/bookings")
+    navigate(`/booking-success/${response.data._id}`) 
+
   }
 
   return (
     <div className="booking">
       <form className="bookingForm" onSubmit={handleSubmit}>
+        <h1 className="bookingTitle"> Start Your Adventure 🎢</h1>
         <label>Name:</label>
         <input
           type="text"
