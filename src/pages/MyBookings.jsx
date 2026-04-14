@@ -15,7 +15,7 @@ const MyBookings = () => {
   }
 
   const handleDelete = async(id) =>{
-    if (window.confirm("Are you sure you want to delete this booking ?")){
+    if (window.confirm("Are you sure you want to cancel this booking ?")){
       try {
         await axios.delete(`http://localhost:3000/bookings/${id}`)
         setBookings(bookings.filter(item => item._id !== id))
@@ -58,7 +58,7 @@ const MyBookings = () => {
             <p>Total: {item.totalPrice}BHD</p>
             <p>Date: {new Date(item.bookingDate).toLocaleDateString()}</p>
 
-            <button onClick={()=>handleDelete(item._id)}>Delete</button>
+            <button onClick={()=>handleDelete(item._id)}>Cancel booking</button>
           </div>
         ))) : (<p>No booking found</p>)}
       </div>
