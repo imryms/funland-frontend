@@ -7,7 +7,7 @@ const MyBookings = () => {
 
   const getBookings = async()=>{
     try {
-      const res = await axios.get(`http://localhost:3001/bookings?email=${userEmail}`)
+      const res = await axios.get(`http://localhost:3000/bookings?email=${userEmail}`)
       setBookings(res.data)
     } catch (error) {
       console.error("Error getting bookings" , error)
@@ -17,7 +17,7 @@ const MyBookings = () => {
   const handleDelete = async(id) =>{
     if (window.confirm("Are you sure you want to delete this booking ?")){
       try {
-        await axios.delete(`http://localhost:3001/bookings/${id}`)
+        await axios.delete(`http://localhost:3000/bookings/${id}`)
         setBookings(bookings.filter(item => item._id !== id))
       } catch (error) {
         console.error("Error deleting booking" , error)
@@ -50,7 +50,7 @@ const MyBookings = () => {
         <button onClick={getBookings}>Search</button>
       </div>
 
-      <div className={cards-container}>
+      <div className={"cards-container"}>
         {bookings.length > 0 ? (
           bookings.map((item)=>(
           <div key={item._id} className="booking-card">
@@ -61,7 +61,7 @@ const MyBookings = () => {
             <p>Total:{item.totalPrice}</p>
             <p>Date:{item.bookingDate}</p>
 
-            <button onClick={deleteOnClick}>Delete</button>
+            <button onClick={()=>deleteOnClick(item_id)}>Delete</button>
           </div>
         ))) : (<p>No booking found</p>)}
       </div>
