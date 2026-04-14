@@ -32,7 +32,8 @@ const Book = ({ bookings, setBookings }) => {
     setBookings(bookingList)
 
     setFormState(initialState)
-    navigate("/bookings")
+    navigate(`/booking-success/${response.data._id}`) 
+
   }
 
   return (
