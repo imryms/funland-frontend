@@ -34,27 +34,45 @@ const Success = () => {
 
   return (
     <div className="success">
-      <h1>Thank You for Your Booking!</h1>
+      <div className="success-card">
+        <h1>Thank You for Your Booking!</h1>
 
-      <p>
-        <strong>Name:</strong> {booking.customerName}
-      </p>
-      <p>
-        <strong>Email:</strong> {booking.customerEmail}
-      </p>
-      <p>
-        <strong>Ticket Type:</strong> {booking.ticketType}
-      </p>
-      <p>
-        <strong>Quantity:</strong> {booking.quantity}
-      </p>
-      <p>
-        <strong>Date:</strong>{" "}
-        {new Date(booking.bookingDate).toLocaleDateString()}
-      </p>
-      <p>
-        <strong>Total Price:</strong> {booking.totalPrice} BD
-      </p>
+        <div className="booking-details">
+          <div className="row">
+            <span>Name</span>
+            <p>{booking.customerName}</p>
+          </div>
+
+          <div className="row">
+            <span>Email</span>
+            <p>{booking.customerEmail}</p>
+          </div>
+
+          <div className="row">
+            <span>Ticket Type</span>
+            <p className="tag">{booking.ticketType}</p>
+          </div>
+
+          <div className="row">
+            <span>Quantity</span>
+            <p>{booking.quantity}</p>
+          </div>
+
+          <div className="row">
+            <span>Date</span>
+            <p>{new Date(booking.bookingDate).toLocaleDateString()}</p>
+          </div>
+
+          <div className="row total">
+            <span>Total Price</span>
+            <p>{booking.totalPrice} BD</p>
+          </div>
+        </div>
+
+        <button className="back-btn" onClick={() => navigate("/")}>
+          Back to Home
+        </button>
+      </div>
     </div>
   )
 }

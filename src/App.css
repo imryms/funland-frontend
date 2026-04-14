@@ -490,14 +490,12 @@ body {
 
 /* Success */
 .success {
-  min-height: calc(100vh - 130px);
+  min-height: 100vh;
   background: linear-gradient(135deg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 48px 32px;
+  padding: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -505,8 +503,8 @@ body {
 .success::before {
   content: "";
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   background: #ff6ec4;
   border-radius: 50%;
   opacity: 0.12;
@@ -517,13 +515,94 @@ body {
 .success::after {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   background: #7873f5;
   border-radius: 50%;
   opacity: 0.12;
   bottom: -40px;
   right: -40px;
+}
+
+.success-card {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  z-index: 1;
+  animation: fadeUp 0.6s ease;
+}
+
+.success-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.booking-details {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.booking-details .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-details .row:last-child {
+  border-bottom: none;
+}
+
+.booking-details span {
+  font-weight: 600;
+  color: #444;
+}
+
+.booking-details p {
+  margin: 0;
+  color: #6b5b8a;
+  font-weight: 500;
+}
+
+.tag {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.total p {
+  font-weight: 700;
+  color: #000;
+}
+
+.back-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 .no-booking {
@@ -571,27 +650,4 @@ body {
 .no-booking .Btn:hover {
   transform: scale(1.05);
   opacity: 0.92;
-}
-
-.success h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.success p {
-  font-size: 1.05rem;
-  color: #6b5b8a;
-  margin: 10px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.success strong {
-  color: #333;
 }
