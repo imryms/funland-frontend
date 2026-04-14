@@ -66,7 +66,6 @@ body {
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
   border-top: 3px solid #ffd93d;
 }
 
@@ -84,44 +83,101 @@ body {
 }
 
 .about h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
+   font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .about p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   margin-bottom: 10px;
 }
 
 /* Home */
 .home {
+  min-height: calc(100vh - 130px);
+  background: linear-gradient(135deg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #ff6ec4;
+  border-radius: 50%;
+  opacity: 0.12;
+  top: -60px;
+  left: -60px;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #7873f5;
+  border-radius: 50%;
+  opacity: 0.12;
+  bottom: -40px;
+  right: -40px;
 }
 
 .homeTitle {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .homeText {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #6b5b8a;
+  max-width: 420px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .homeBtn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  background: #ff6ec4;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
   color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  position: relative;
+  z-index: 1;
+  font-family: "DM Sans", sans-serif;
 }
 
 .homeBtn:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
+  opacity: 0.92;
 }
 
 /* Booking Form */

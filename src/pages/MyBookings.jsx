@@ -7,7 +7,7 @@ const MyBookings = () => {
 
   const getBookings = async()=>{
     try {
-      const res = await axios.get(`http://localhost:3001/bookings?email=${userEmail}`)
+      const res = await axios.get(`http://localhost:3000/bookings?email=${userEmail}`)
       setBookings(res.data)
     } catch (error) {
       console.error("Error getting bookings" , error)
@@ -15,9 +15,9 @@ const MyBookings = () => {
   }
 
   const handleDelete = async(id) =>{
-    if (window.confirm("Are you sure you want to delete this booking ?")){
+    if (window.confirm("Are you sure you want to cancel this booking ?")){
       try {
-        await axios.delete(`http://localhost:3001/bookings/${id}`)
+        await axios.delete(`http://localhost:3000/bookings/${id}`)
         setBookings(bookings.filter(item => item._id !== id))
       } catch (error) {
         console.error("Error deleting booking" , error)
@@ -29,9 +29,6 @@ const MyBookings = () => {
     setUserEmail(event.target.value)
   }
 
-  const deleteOnClick=(id)=>{
-    handleDelete(id)
-  }
 
   useEffect(()=>{
     getBookings()
@@ -50,18 +47,18 @@ const MyBookings = () => {
         <button onClick={getBookings}>Search</button>
       </div>
 
-      <div className={cards-container}>
+      <div className={"cards-container"}>
         {bookings.length > 0 ? (
           bookings.map((item)=>(
           <div key={item._id} className="booking-card">
             <h3>{item.customerName}</h3>
-            <p>Email:{item.customerEmail}</p>
-            <p>Type:{item.ticketType}</p>
-            <p>Quantity:{item.quantity}</p>
-            <p>Total:{item.totalPrice}</p>
-            <p>Date:{item.bookingDate}</p>
+            <p>Email: {item.customerEmail}</p>
+            <p>Type: {item.ticketType}</p>
+            <p>Quantity: {item.quantity}</p>
+            <p>Total: {item.totalPrice}BHD</p>
+            <p>Date: {new Date(item.bookingDate).toLocaleDateString()}</p>
 
-            <button onClick={deleteOnClick}>Delete</button>
+            <button onClick={()=>handleDelete(item._id)}>Cancel booking</button>
           </div>
         ))) : (<p>No booking found</p>)}
       </div>
