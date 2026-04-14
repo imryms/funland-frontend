@@ -29,9 +29,6 @@ const MyBookings = () => {
     setUserEmail(event.target.value)
   }
 
-  const deleteOnClick=(id)=>{
-    handleDelete(id)
-  }
 
   useEffect(()=>{
     getBookings()
@@ -58,10 +55,10 @@ const MyBookings = () => {
             <p>Email:{item.customerEmail}</p>
             <p>Type:{item.ticketType}</p>
             <p>Quantity:{item.quantity}</p>
-            <p>Total:{item.totalPrice}</p>
-            <p>Date:{item.bookingDate}</p>
+            <p>Total:{item.totalPrice}BHD</p>
+            <p>Date:{new Date(item.bookingDate).toLocaleDateString()}</p>
 
-            <button onClick={()=>deleteOnClick(item_id)}>Delete</button>
+            <button onClick={()=>handleDelete(item._id)}>Delete</button>
           </div>
         ))) : (<p>No booking found</p>)}
       </div>
