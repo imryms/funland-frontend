@@ -1,18 +1,56 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎡 FunLand - Park Booking Platform
 
-Currently, two official plugins are available:
+## Date: 13/04/2026
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### By: Maryam Altammam - Zainab Aljad - Fatema BuSharar
 
-## React Compiler
+#### [Website](#)
+#### [Maryam's GitHub](https://github.com/imryms) | [Zainab's GitHub](https://github.com/Zaljad) | [Fatema's GitHub](https://github.com/FatemaBuSharar) |
+#### [Maryam's LinkedIn](https://www.linkedin.com/in/maryam-altammam/) | [Zainabs's LinkedIn](https://www.linkedin.com/in/zainabaljad/) | [Fatema's LinkedIn](https://www.linkedin.com/in/fatemabusharar/) |
+***
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### ***Description***
+#### FunLand is a Full-stack booking platform that allows users to instantly reserve park tickets.
+***
 
-Note: This will impact Vite dev & build performances.
+### ***Technologies Used***
+* Frontend: React.js & Axios.
+* Backend: Node.js & Express.
+* Database: MongoDB & Mongoose.
+* Styling: CSS
+***
+### 🔗 Project Links
+- **Frontend Repository:** [[ Frontend Repo ](https://github.com/imryms/funland-frontend)]
+- **Backend Repository:** [[ Backend Repo ](https://github.com/imryms/funland-backend)]
+***
 
-## Expanding the ESLint configuration
+### ***RED***
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+![RED](/Images/FunlandDiagram.drawio.png)
+***
+
+### ***Getting Started***
+
+##### Click the link and Book your ticket 🎡.
+
+##### The project was deployed and can be viewed [here](https://funland-frontend-6p6a.onrender.com/).
+***
+
+### ***Screenshots***
+
+##### Home page
+![image](/Images/Screenshot%20Funland%20Home_page.png)
+
+##### Book page
+![image](/Images/Screenshot%20Funland%20Book_page.png)
+
+##### MyBooking page
+![image](/Images//Screenshot%20Funland%20MyBooking_page.png)
+
+##### About page
+![image](/Images/Screenshot%20Funland%20About_page.png)
+***
+
+
