@@ -526,6 +526,53 @@ body {
   right: -40px;
 }
 
+.no-booking {
+  min-height: calc(100vh - 130px);
+  background: linear-gradient(135deg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.no-booking h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.no-booking p {
+  font-size: 1rem;
+  color: #6b5b8a;
+  margin-bottom: 25px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.no-booking .Btn {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "DM Sans", sans-serif;
+}
+
+.no-booking .Btn:hover {
+  transform: scale(1.05);
+  opacity: 0.92;
+}
+
 .success h1 {
   font-size: 2.4rem;
   font-weight: 700;
