@@ -1,24 +1,29 @@
-import '../App.css'
+import "../App.css"
 
 const About = () => {
   return (
     <div className="aboutContainer">
-
       <section className="about">
         <h1 className="aboutTitle">About FunLand 🎡</h1>
 
         <p className="aboutText">
-          FunLand is your perfect destination for fun, adventure, and unforgettable memories.
-        </p>
-        <p className="aboutText">
-          We offer exciting rides, family-friendly attractions, and a simple booking experience.
+          FunLand is a vibrant and colorful theme park designed to bring joy,
+          excitement, and unforgettable memories to visitors of all ages,
+          offering a wide variety of thrilling rides, interactive play areas,
+          and family-friendly attractions that create the perfect environment
+          for fun and connection, where every corner is filled with energy,
+          laughter, and adventure, making it the ideal destination whether
+          you're spending time with friends or enjoying a special day with
+          family.
         </p>
 
-        <p className="aboutText">
-          Whether you're visiting with friends or family, FunLand guarantees a day full of excitement.
-        </p>
+        <div className="aboutImages">
+          <img src="/images/funland1.jpg" alt="fun1" />
+          <img src="/images/funland2.jpg" alt="fun2" />
+          <img src="/images/funland3.jpg" alt="fun3" />
+          <img src="/images/funland4.jpg" alt="fun4" />
+        </div>
       </section>
-
     </div>
   )
 }
