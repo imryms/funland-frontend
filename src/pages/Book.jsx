@@ -38,6 +38,7 @@ const Book = ({ bookings, setBookings }) => {
   return (
     <div className="booking">
       <form className="bookingForm" onSubmit={handleSubmit}>
+        <h1 className="bookingTitle"> Start Your Adventure 🎢</h1>
         <label>Name:</label>
         <input
           type="text"
