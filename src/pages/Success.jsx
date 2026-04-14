@@ -12,7 +12,7 @@ const Success = () => {
 
   useEffect(() => {
     const getBooking = async () => {
-      const response = await axios.get(`${API_URL}}/${id}`)
+      const response = await axios.get(`${API_URL}/bookings/${id}`)
       setBooking(response.data)
     }
 

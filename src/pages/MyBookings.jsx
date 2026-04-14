@@ -19,7 +19,7 @@ const MyBookings = () => {
   const handleDelete = async(id) =>{
     if (window.confirm("Are you sure you want to cancel this booking ?")){
       try {
-        await axios.delete(`http://localhost:3000/bookings/${id}`)
+        await axios.delete(`${API_URL}/bookings/${id}`)
         setBookings(bookings.filter(item => item._id !== id))
       } catch (error) {
         console.error("Error deleting booking" , error)
