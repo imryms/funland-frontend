@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border-bottom: 3px solid #ffd93d;
+}
+
+.logo a {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 25px;
+}
+
+.navbarLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbarLinks a:hover {
+  color: #ffd93d;
+  transform: scale(1.1);
+}
+
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 3px solid #ffd93d;
+}
+
+.footer p {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.homeTitle {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.homeText {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.homeBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #ff6ec4;
+  color: white;
+  cursor: pointer;
+}
+
+.homeBtn:hover {
+  opacity: 0.9;
+}
