@@ -40,14 +40,14 @@ const MyBookings = () => {
     <div className="booking-container">
       <h2>MyBookings</h2>
 
-      <dev className="search-by-email">
+      <div className="search-by-email">
         <input
           type="email"
           placeholder="Enter your email"
           value={userEmail}
           onChange={handleChange}/>
         <button onClick={getBookings}>Search</button>
-      </dev>
+      </div>
 
       <div className={"cards-container"}>
         {bookings.length > 0 ? (
