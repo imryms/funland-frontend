@@ -52,11 +52,11 @@ const MyBookings = () => {
           bookings.map((item)=>(
           <div key={item._id} className="booking-card">
             <h3>{item.customerName}</h3>
-            <p>Email:{item.customerEmail}</p>
-            <p>Type:{item.ticketType}</p>
-            <p>Quantity:{item.quantity}</p>
-            <p>Total:{item.totalPrice}BHD</p>
-            <p>Date:{new Date(item.bookingDate).toLocaleDateString()}</p>
+            <p>Email: {item.customerEmail}</p>
+            <p>Type: {item.ticketType}</p>
+            <p>Quantity: {item.quantity}</p>
+            <p>Total: {item.totalPrice}BHD</p>
+            <p>Date: {new Date(item.bookingDate).toLocaleDateString()}</p>
 
             <button onClick={()=>handleDelete(item._id)}>Delete</button>
           </div>
