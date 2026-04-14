@@ -7,6 +7,7 @@ const Book = ({ bookings, setBookings }) => {
     customerEmail: "",
     ticketType: "",
     quantity: 1,
+    bookingDate: "",
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -70,6 +71,14 @@ const Book = ({ bookings, setBookings }) => {
         min="1"
         onChange={handleChange}
         value={formState.quantity}
+      />
+
+      <label>Booking Date:</label>
+      <input
+        type="date"
+        name="bookingDate"
+        onChange={handleChange}
+        value={formState.bookingDate}
       />
 
       <button type="submit">Book</button>
