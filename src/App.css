@@ -346,125 +346,184 @@ body {
   opacity: 0.92;
 }
 
-.booking-container{
+/* MyBookings */
+.booking-container {
   min-height: calc(100vh - 130px);
-  background: linear-gradient(135eg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
+  background: linear-gradient(135deg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
   padding: 60px 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.booking-container h2{
+.booking-container::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #ff6ec4;
+  border-radius: 50%;
+  opacity: 0.12;
+  top: -60px;
+  left: -60px;
+}
+
+.booking-container::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #7873f5;
+  border-radius: 50%;
+  opacity: 0.12;
+  bottom: -40px;
+  right: -40px;
+}
+
+.booking-container h2 {
   font-size: 2.2rem;
-  background-color: transparent;
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 30px;
+  z-index: 1;
 }
 
-.search-by-email{
-  display:flex;
-  gap:10px;
+.search-by-email {
+  display: flex;
+  gap: 10px;
   margin-bottom: 40px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgb(0,0,0,0.07);
-
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
 }
-.search-by-email input{
+
+.search-by-email input {
   flex: 1;
   border: none;
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
-  padding: 5px;
+  outline: none;
+  background: transparent;
 }
 
-.search-by-email button{
+.search-by-email button {
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   color: white;
   border: none;
   padding: 10px 25px;
-  border-radius: 7px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.search-by-email button:hover{
+.search-by-email button:hover {
   transform: scale(1.05);
 }
 
-.cards-container{
+.cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-  gap:25px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
   width: 100%;
   max-width: 1100px;
-  justify-content: center;
-
+  z-index: 1;
 }
 
-.booking-card{
-  background: white;
-  padding:25px 35px;
+.booking-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px  rgb(120, 115, 245,0.1);
-  border-left: 5px solid #ff63c4;
-  position: relative;
-  overflow: hidden;
-
+  box-shadow: 0 10px 25px rgba(120, 115, 245, 0.15);
+  border-left: 5px solid #ff6ec4;
+  transition: 0.3s;
 }
 
-.booking-card:hover{
+.booking-card:hover {
   transform: translateY(-5px);
 }
 
-.booking-card p{
-  font-family: 0.9rem;
-  color:#555;
-  margin-bottom: 7px;
-}
-
-
-.booking-card h3{
-  color:#7873f5;
+.booking-card h3 {
+  color: #7873f5;
   margin-bottom: 10px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
-.booking-card button{
-  background: #ffff;
+.booking-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.booking-card button {
+  background: white;
   color: #ff4d4d;
   border: 1.5px solid #ff4d4d;
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 10px;
   margin-top: 15px;
   font-weight: 600;
-
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.booking-card button:hover{
+.booking-card button:hover {
   background: #ff4d4d;
   color: white;
 }
 
-.cards-container >p{
-  grid-column: 1/-1;
+.cards-container > p {
+  grid-column: 1 / -1;
   text-align: center;
-  font-size: 1.2em;
-  color:#6b5b8a;
+  font-size: 1.1rem;
+  color: #6b5b8a;
   margin-top: 20px;
 }
 
-
-
-
-
+/* Success */
 .success {
-  max-width: 500px;
-  margin: 80px auto;
-  padding: 30px;
+  min-height: calc(100vh - 130px);
+  background: linear-gradient(135deg, #fff0fa 0%, #ede8ff 50%, #fff7cc 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.success::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #ff6ec4;
+  border-radius: 50%;
+  opacity: 0.12;
+  top: -60px;
+  left: -60px;
+}
+
+.success::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #7873f5;
+  border-radius: 50%;
+  opacity: 0.12;
+  bottom: -40px;
+  right: -40px;
 }
 
 .success h1 {
@@ -473,15 +532,17 @@ body {
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 16px;
   position: relative;
   z-index: 1;
 }
 
 .success p {
-  font-size: 16px;
+  font-size: 1.05rem;
+  color: #6b5b8a;
   margin: 10px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .success strong {
