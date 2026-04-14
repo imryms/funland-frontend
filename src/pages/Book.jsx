@@ -4,6 +4,7 @@ import axios from "axios"
 
 const Book = ({ bookings, setBookings }) => {
   const navigate = useNavigate()
+  const API_URL = import.meta.env.VITE_API_URL
 
   const initialState = {
     customerName: "",
@@ -23,16 +24,16 @@ const Book = ({ bookings, setBookings }) => {
     event.preventDefault()
 
     const response = await axios.post(
-      "http://localhost:3000/bookings",
-      formState
-    )
+  `${API_URL}/bookings`,
+  formState
+)
 
     let bookingList = [...bookings]
     bookingList.push(response.data)
     setBookings(bookingList)
 
     setFormState(initialState)
-    navigate(`/booking-success/${response.data._id}`) 
+    navigate(`/booking-success/${response.data._id}`)
 
   }
 
