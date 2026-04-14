@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Book from './pages/Book'
 import MyBookings from './pages/MyBookings'
 import About from './pages/About'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/bookings" element={<MyBookings />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
+
     </>
   )
 }
