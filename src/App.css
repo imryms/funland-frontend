@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 * {
   margin: 0;
@@ -16,7 +16,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
 }
 .app {
   display: flex;
@@ -61,7 +60,6 @@ body {
   color: #ffd93d;
   transform: scale(1.1);
 }
-
 
 /* Footer */
 .footer {
@@ -173,4 +171,64 @@ body {
 .homeBtn:hover {
   transform: scale(1.05);
   opacity: 0.92;
+}
+
+/* Booking Form */
+.booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.bookingForm {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bookingForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bookingForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.bookingForm input,
+.bookingForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.bookingForm input:focus,
+.bookingForm select:focus {
+  border-color: #7873f5;
+}
+
+.bookingForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bookingForm button:hover {
+  opacity: 0.9;
 }
