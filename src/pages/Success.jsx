@@ -7,10 +7,12 @@ const Success = () => {
   const navigate = useNavigate()
   const { id } = useParams()
   const [booking, setBooking] = useState(null)
+  const API_URL = import.meta.env.VITE_API_URL
+
 
   useEffect(() => {
     const getBooking = async () => {
-      const response = await axios.get(`http://localhost:3000/bookings/${id}`)
+      const response = await axios.get(`${API_URL}}/${id}`)
       setBooking(response.data)
     }
 

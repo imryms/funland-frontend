@@ -4,10 +4,12 @@ const MyBookings = () => {
 
   const[bookings, setBookings] = useState([])
   const[userEmail, setUserEmail] =useState("")
+    const API_URL = import.meta.env.VITE_API_URL
+
 
   const getBookings = async()=>{
     try {
-      const res = await axios.get(`http://localhost:3000/bookings?email=${userEmail}`)
+      const res = await axios.get(`${API_URL}/bookings?email=${userEmail}`)
       setBookings(res.data)
     } catch (error) {
       console.error("Error getting bookings" , error)
