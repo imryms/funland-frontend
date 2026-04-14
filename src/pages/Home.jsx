@@ -1,4 +1,4 @@
-import '../App.css'
+import "../App.css"
 import { useNavigate } from "react-router-dom"
 const Home = () => {
   const navigate = useNavigate()
@@ -6,11 +6,15 @@ const Home = () => {
     <div className="home">
       <h1 className="homeTitle">Welcome to FunLand 🎡</h1>
 
+      <img src="/images/funland.jpg" alt="Funland" className="homeImg" />
+
       <p className="homeText">
         Book your tickets easily and enjoy a fun day full of exciting rides!
       </p>
 
-      <button className="homeBtn" onClick={() => navigate('/book')} >Book Now</button>
+      <button className="homeBtn" onClick={() => navigate("/book")}>
+        Book Now
+      </button>
     </div>
   )
 }
