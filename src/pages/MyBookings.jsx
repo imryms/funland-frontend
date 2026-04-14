@@ -38,14 +38,14 @@ const MyBookings = () => {
     <div className="booking-container">
       <h2>MyBookings</h2>
 
-      <div className="search-by-email">
+      <dev className="search-by-email">
         <input
           type="email"
           placeholder="Enter your email"
           value={userEmail}
           onChange={handleChange}/>
         <button onClick={getBookings}>Search</button>
-      </div>
+      </dev>
 
       <div className={"cards-container"}>
         {bookings.length > 0 ? (
@@ -60,7 +60,8 @@ const MyBookings = () => {
 
             <button onClick={()=>handleDelete(item._id)}>Cancel booking</button>
           </div>
-        ))) : (<p>No booking found</p>)}
+        ))) : userEmail==="" ? (<p>Please enter your <strong>email</strong> to show your bookings🎡</p>)
+        :(<p>No booking found</p>)}
       </div>
     </div>
 
